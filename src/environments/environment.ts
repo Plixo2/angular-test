@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiBase: "http://localhost:8080",
-  authBase: 'https://auth.festech.de/auth',
-  clientId: 'moritz-frontend'
+  apiBase: 'http://localhost:8080',
+  authBase: 'https://auth.festech.de/auth/',
+  clientId: 'moritz-frontend',
 };
 
 /*

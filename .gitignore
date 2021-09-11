@@ -12,6 +12,7 @@
 
 # profiling files
 chrome-profiler-events*.json
+package-lock.json
 
 # IDEs and editors
 /.idea
