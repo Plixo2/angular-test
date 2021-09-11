@@ -1,0 +1,55 @@
+<td>{{product.id}}</td>
+
+<td *ngIf="!isEditMode">{{product.name}}</td>
+<td *ngIf="isEditMode">
+  <input type="text" class="form-control" name="nameField" [(ngModel)]="product.name"
+         (keydown.enter)="saveProduct()">
+</td>
+
+<td *ngIf="!isEditMode">{{product.price}}</td>
+<td *ngIf="isEditMode">
+<input type="number" class="form-control" name="priceField" [(ngModel)]="product.price"
+       (keydown.enter)="saveProduct()">
+</td>
+
+<td *ngIf="!isEditMode">{{product.description}}</td>
+<td *ngIf="isEditMode">
+  <input type="text" class="form-control" name="descriptionField" [(ngModel)]="product.description"
+         (keydown.enter)="saveProduct()">
+</td>
+
+<td>
+  <div class="row">
+    <button *ngIf="!isEditMode" class="btn btn-sm btn-outline-primary" (click)="isEditMode = true">
+      Edit
+    </button>
+    <button *ngIf="isEditMode" class="btn btn-sm btn-outline-success" (click)="saveProduct()">
+      Save
+    </button>
+    <button class="btn btn-sm btn-outline-info mx-2" routerLink="/details/{{index}}">
+      Details
+    </button>
+    <button class="btn btn-sm btn-outline-danger mx-2" (click)="removeProduct()">
+      Remove
+    </button>
+  </div>
+</td>
+
+
+<!--
+<div class="d-flex justify-content-around align-items-center w-100 bg-dark rounded my-1">
+  <h4>
+    {{product.id}}
+  </h4>
+  <h4>
+    {{product.name}}
+  </h4>
+  <h4>
+    {{product.price}}
+  </h4>
+  <h4>
+    {{product.description}}
+  </h4>
+
+</div>
+-->

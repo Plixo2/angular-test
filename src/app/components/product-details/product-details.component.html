@@ -1,0 +1,29 @@
+
+
+<div *ngIf="!loading" class="detail-container">
+  <div class="detail-mid bg-dark">
+    <h4>
+      {{product.id}}
+    </h4>
+    <h4>
+      {{product.name}}
+    </h4>
+    <h4>
+      {{product.price}}
+    </h4>
+    <h4>
+      {{product.description}}
+    </h4>
+  </div>
+</div>
+
+
+<div class="d-flex justify-content-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<button routerLink="/" class="btn btn-outline-primary" id="backButton">
+  Back
+</button>
