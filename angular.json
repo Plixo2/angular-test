@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/bootstrap-dark.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
